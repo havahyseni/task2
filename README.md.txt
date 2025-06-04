@@ -1,0 +1,11 @@
+# Task 2
+
+## Description
+This project is an example that can be used in online application
+for any document. Which checks if the insert data is correct and 
+checks if the user is a human or a robot usually used in online forms.
+
+## What does it contain
+
+```bash
+python main.py
