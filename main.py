@@ -31,6 +31,7 @@ def invalid():
 def capitalize_name(name, surname):
     return f"{name.capitalize()} {surname.capitalize()}"
 
+
 # inputs = [name, surname, birth_year, place, status] #list
 # inputs.insert(3, age(birth_year)) #adding age to the list (in position between birthyear and place)
 #changed the above list to dict
@@ -43,10 +44,14 @@ user_data = {
     "occupation": status
 }
 
+if not legal_age(user_data["age"]):
+    print("You cannot proceed with the application.")
+    exit()  # Stops the program if under legal age
+
 
 print("These are your registered data:")
-print("Name:", user_data["name"])
-print("Surname:", user_data["surname"])
+print("Name:", capitalize_name(user_data["name"], user_data["surname"]).split()[0]) #using the function
+print("Surname:", capitalize_name(user_data["name"], user_data["surname"]).split()[1]) #using the function
 print("Birth year:", user_data["birth year"])
 print("Age:", user_data["age"])
 print("Place:", user_data["place"])
